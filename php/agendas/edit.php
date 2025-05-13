@@ -1,46 +1,77 @@
-<?
+<?php
+// php/agendas/edit.php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
+require_once __DIR__ . '/../db.php';
 
-
-// check the session
-if (!isset($_SESSION['user_id'])){
+// 1) Vérifier que l'utilisateur est connecté
+if (!isset($_SESSION['user_id'])) {
     header('Location: ../login.php');
     exit;
 }
 $userId = $_SESSION['user_id'];
 
-// get the id 
+// 2) Récupérer l'ID passé en GET
 $id = $_GET['id'] ?? null;
-if(!$id){
+if (!$id) {
     header('Location: index.php');
     exit;
 }
 
-// charger les donnees existantes
-$stmt = $pdo->prepare("SELECT title FROM agendas WHERE id = ? AND user_id = ?");
-$stmt->execute([$id,$userId]);
+// 3) Charger l'agenda depuis la base
+$stmt = $pdo->prepare("
+    SELECT title
+      FROM agendas
+     WHERE id = ?
+       AND user_id = ?
+");
+$stmt->execute([$id, $userId]);
 $agenda = $stmt->fetch();
-if(!$agenda){
-    exit('Agenda not found or refuse access');
+
+// 4) Si l'agenda n'existe pas ou n'appartient pas à cet utilisateur
+if (!$agenda) {
+    exit('Agenda non trouvé ou accès refusé.');
+}
+
+// 5) Si le formulaire est soumis, traiter la mise à jour
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    $newTitle = trim($_POST['title'] ?? '');
+    if ($newTitle !== '') {
+        $u = $pdo->prepare("
+            UPDATE agendas
+               SET title = ?
+             WHERE id = ?
+               AND user_id = ?
+        ");
+        $u->execute([$newTitle, $id, $userId]);
+    }
+    header('Location: index.php');
+    exit;
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>UPDATE AGENDA</title>
 </head>
 <body>
-    <h1>Edite Agenda</h1>
-    <form action="edit.php?id=<?=$id?>" method="post">
+  <h1>Update agenda</h1>
+  <form method="post" action="edit.php?id=<?= htmlspecialchars($id) ?>">
     <label>
-      Titre :
-      <input name="title" value="<?= htmlspecialchars($agenda['title']) ?>" required>
-    </label>
-    <button type="submit">DONE</button>
-    </form>
-    <button><a href="index.php">← Return</a></button>
+      Ttile :
+      <input
+        type="text"
+        name="title"
+        value="<?= htmlspecialchars($agenda['title']) ?>"
+        required
+      >
+    </label><br><br>
+    <button type="submit">SAVE</button>
+  </form>
+  <p><a href="index.php">← Return to agenda list</a></p>
 </body>
 </html>
