@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         }else{
             // add new user 
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $pdo -> prepare('INSERT INTO users (email, password values (? , ?)');
+            $stmt = $pdo -> prepare('INSERT INTO users (email,password) values (? , ?)');
             $stmt -> execute([$email , $hash]);
 
             // connexion
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <?php if ($error): ?>
           <p style="color:red;"><?= htmlspecialchars($error) ?></p>
     <?php endif ?>
-    <form action="post">
+    <form method="post" action="register.php">
         <label>Email : </label>
         <input type="email" name="email" required><br>
         <label>Password:</label>
