@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $password = $_POST['password'];
     $confirm = $_POST['confirm_password'];
 
-    if (!$email || $password || $confirm ){
+    if (!$email || !$password || !$confirm ){
         $error = 'all information are required';
 
     }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
