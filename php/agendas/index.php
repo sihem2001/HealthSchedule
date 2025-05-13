@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once__DIR__ ."/../db.php";
+require_once __DIR__ . '/../db.php';
 
 // check the session
 if ( !isset($_SESSION["user_id"])) {
@@ -20,9 +20,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST'){
     exit;
 }
 // get list of agendas
-$stmt= $pdo -> prepare('SELECT * WHERE user_id = ? ORDER BY id DESC');
-$stmt -> execute([$userId]);
-$agendas + $stmt -> fetchAll();
+$stmt = $pdo->prepare(
+    "SELECT * 
+     FROM agendas 
+     WHERE user_id = ? 
+     ORDER BY id DESC"
+);
+$stmt->execute([$userId]);
+$agendas = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
