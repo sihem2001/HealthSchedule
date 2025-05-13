@@ -51,10 +51,11 @@ $agendas = $stmt->fetchAll();
     <?php foreach ($agendas as $a): ?>
         <li>
         <?= htmlspecialchars($a['title']) ?>
-        [<button><a href="edit.php?id=<?= $a['id'] ?>">éditer</a></button>]
-        [<button><a href="delete.php?id=<?= $a['id'] ?>"
-            onclick="return confirm('Supprimer cet agenda ?')">supprimer</a></button>]
-        [<button><a href="events.php?agenda_id=<?= $a['id'] ?>">événements</a></button>]
+        [<button> <a href="edit.php?id=<?= $a['id'] ?>">éditer</a></button>]
+        [<button>
+            <a href="delete.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>"
+         onclick="return confirm('Supprimer cet événement ?')">supprimer</a></button>]
+        [<button><a href="event/index.php?agenda_id=<?= $a['id'] ?>">événements</a></button>]
         </li>
     <?php endforeach; ?>
     </ul>

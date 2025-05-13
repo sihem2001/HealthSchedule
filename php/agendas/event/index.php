@@ -4,11 +4,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-require_once __DIR__ . '/../db.php';
+require_once __DIR__ . '/../../db.php';
+
 
 // check the login authentification
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
+   header('Location: ../../login.php');
     exit;
 }
 $userId   = $_SESSION['user_id'];
@@ -53,7 +54,7 @@ $events = $stmt->fetchAll();
 </head>
 <body>
   <h1>Event Agendas #<?= htmlspecialchars($agendaId) ?></h1>
-  <p><a href="../agendas/index.php">← My Agendas</a></p>
+  <p><a href="../index.php">← My Agendas</a></p>
 
   <form id="event-form" method="post" action="index.php?agenda_id=<?= $agendaId ?>">
     <label>
@@ -72,8 +73,8 @@ $events = $stmt->fetchAll();
     <?php foreach ($events as $e): ?>
       <li>
         <?= htmlspecialchars($e['title']) ?> (<?= $e['start'] ?> → <?= $e['end'] ?>)
-        [<a href="edit.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>">éditer</a>]
-        [<a href="delete.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>" onclick="return confirm('Supprimer cet événement ?')">supprimer</a>]
+        [<a href="edit.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>">Update</a>]
+        [<a href="delete.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>" onclick="return confirm('Supprimer cet événement ?')">Delete</a>]
       </li>
     <?php endforeach; ?>
   </ul>
