@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         }else{
             // add new user 
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $pdo -> prepare('INSERT INTO users (email,password) values (? , ?)');
+            $stmt = $pdo -> prepare('INSERT INTO users (email, password) values (? , ?)');
             $stmt -> execute([$email , $hash]);
 
             // connexion
