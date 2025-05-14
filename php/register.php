@@ -71,9 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <input type="password" name="confirm_password" placeholder="rewrite to confirme your password" required><br>
         <button type="submit">Register Now</button>
     </form>
+    <!-- case where user already existe -->
+      <p class="newAccount">already Register ? <a href="login.php">LOGING</a></p>
     </fieldset>
-<!-- case where user already existe -->
-  <p class="newAccount">already Register ? <a href="login.php">LOGING</a></p>
+
+
 </section>
 <!-- footer part -->
     <footer class="footer-section">
