@@ -16,7 +16,8 @@ if ( !isset($_SESSION['user_id'])){
  </head>
  <body>
     <h1> HELLO IN HEALTH-AGENDA</h1>
-    <P>YOU ARE CONNECTE ; YOUR ID <?= htmlspecialchars($_SESSION['user_id']) ?></P>
+    <P>YOU ARE CONNECTE ; YOUR ID <?= htmlspecialchars($_SESSION['user_id']) ?></P><br>
+    <button><a href="./agendas/index.php">My Agendas</a></button><br>
       <button><a href="logout.php">LOGOUT</a></button>
  </body>
  </html>

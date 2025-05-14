@@ -41,7 +41,7 @@ $agendas = $stmt->fetchAll();
 <body>
     <h1> MY AGENDA </h1>
     <button><a href="../dashboard.php"> _Dashboard</a></button> <br>
-    <form action="index.php" method="post">
+    <form  method="post">
         <input type="text" name="title" placeholder="title of new agenda" required><br>
         <button type="submit">ADD</button>
     </form>
@@ -53,8 +53,8 @@ $agendas = $stmt->fetchAll();
         <?= htmlspecialchars($a['title']) ?>
         [<button> <a href="edit.php?id=<?= $a['id'] ?>">éditer</a></button>]
         [<button>
-            <a href="delete.php?agenda_id=<?= $agendaId ?>&id=<?= $e['id'] ?>"
-         onclick="return confirm('Supprimer cet événement ?')">supprimer</a></button>]
+           <a href="delete.php?id=<?= $a['id'] ?>" onclick="return confirm('Supprimer cet agenda ?')">Delete</a>
+</button>]
         [<button><a href="event/index.php?agenda_id=<?= $a['id'] ?>">événements</a></button>]
         </li>
     <?php endforeach; ?>
