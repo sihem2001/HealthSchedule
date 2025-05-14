@@ -41,10 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Register</title>
 </head>
 <body>
-  
+    <!-- nav bar -->
+    <header class="loginHeader">
+        <nav><h1>HealthScheduale <i class="fas fa-notes-medical"></i></h1></nav>
+    </header>
+    <!-- register page -->
+     <section class="registerPage">
     <h1>Welcome <strong> Register page</strong></h1>
     <!-- affiche l'erreur -->
     <?php if ($error): ?>
@@ -61,6 +69,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
 <!-- case where user already existe -->
   <p>already Register ? <a href="login.php">LOGING</a></p>
-
+</section>
+<!-- footer part -->
+    <footer class="footer-section">
+    <div class="footer-login">
+        <h3>For more Informations, Call us .</h3>
+        <ul class="socialMedia">
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-youtube"></i></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-phone"></i></a>
+          </li>
+        </ul>
+        <p><strong>Adress :</strong>65, Boulevard Mohamed V, Algiers, Algiers 16002 ·</p>
+        <p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25569.236890908564!2d3.0415312918002813!3d36.766858224380115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb2f877796ffd%3A0x62ac3794efff79ca!2sAlger%20Ctre!5e0!3m2!1sfr!2sdz!4v1696774205475!5m2!1sfr!2sdz"
+            width="500"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </p>
+    </div>
+    <div class="footer-bottom">
+            <p>copyright &copy;2025 codeOpacity. designed by <span>nethunt</span></p> <br>
+    </div>
+</footer>
 </body>
 </html>

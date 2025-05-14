@@ -2,69 +2,6 @@
   color: #f5f5f5;
   font-family: "Open Sans", sans-serif;
 }
-/* header part css */
-.loginHeader {
-  background-color: #00a6a6;
-  color: #f5f5f5;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-.loginHeader h1 {
-  padding-left: 15px;
-}
-nav h1 i {
-  color: #f5f5f5;
-}
-/* footer part */
-.footer-section {
-  background-color: #00a6a6;
-  text-emphasis-color: #ffffff;
-}
-.footer-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-.footer-login h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-decoration: capitalize;
-  line-height: 3rem;
-}
-.socialMedia {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0 15px 0;
-}
-.socialMedia li {
-  margin: 0 10px;
-}
-.socialMedia a {
-  text-decoration: none;
-}
-.socialMedia a i {
-  font-size: 20px;
-  transition: color 0.4s ease;
-}
-.socialMedia a i:hover {
-  color: #d0eafd;
-}
-.footer-bottom {
-  font-size: 14px;
-  word-spacing: 2px;
-  text-decoration: capitalize;
-  display: flex;
-  margin-left: 0px;
-}
-.footer-bottom span {
-  text-transform: uppercase;
-  opacity: 0.4;
-  font-weight: 200px;
-}
 /* error style  */
 .error-message {
   color: red;

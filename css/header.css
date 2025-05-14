@@ -1,0 +1,13 @@
+/* header part css */
+.loginHeader {
+  background-color: #00a6a6;
+  color: #f5f5f5;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.loginHeader h1 {
+  padding-left: 15px;
+}
+nav h1 i {
+  color: #f5f5f5;
+}
