@@ -1,0 +1,246 @@
+* {
+  color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+}
+/* header part css */
+.loginHeader {
+  background-color: #00a6a6;
+  color: #f5f5f5;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.loginHeader h1 {
+  padding-left: 15px;
+}
+nav h1 i {
+  color: #f5f5f5;
+}
+/* footer part */
+.footer-section {
+  background-color: #00a6a6;
+  text-emphasis-color: #ffffff;
+}
+.footer-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-login h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: capitalize;
+  line-height: 3rem;
+}
+.socialMedia {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 15px 0;
+}
+.socialMedia li {
+  margin: 0 10px;
+}
+.socialMedia a {
+  text-decoration: none;
+}
+.socialMedia a i {
+  font-size: 20px;
+  transition: color 0.4s ease;
+}
+.socialMedia a i:hover {
+  color: #d0eafd;
+}
+.footer-bottom {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-decoration: capitalize;
+  display: flex;
+  margin-left: 0px;
+}
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200px;
+}
+/* error style  */
+.error-message {
+  color: red;
+  border: 1px solid red;
+  padding: 12px 16px;
+  background-color: #ffe6e6;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+}
+/* forme css  */
+.login {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(images/feedback.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* the form */
+.fieldset {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+.fieldset legend {
+  font-weight: 900;
+  font-size: 30px;
+  padding-left: 5px;
+}
+/* inputs and labels  */
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #f5f5f5;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #a9d6e5;
+  border-radius: 12px;
+  background-color: #42424200;
+  font-size: 1rem;
+  color: #2f4f4f;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 166, 166, 0.05); /* ombre légère */
+}
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #00a6a6;
+  box-shadow: 0 0 0 4px rgba(0, 166, 166, 0.15);
+}
+.email {
+  margin-bottom: 50px;
+}
+
+.password {
+  margin-bottom: 50px;
+}
+/* button login */
+button {
+  width: 100%;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+}
+button {
+  margin: 15px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  
+  border-radius: 50px;
+  display: block;
+}
+
+button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+/* new account part */
+.newAccount a {
+  color: #00a6a6ad;
+}
+.newAccount a:hover {
+  color: #79cbca;
+}
+/* opinions and feedbakc part */
+.feedback {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(137, 194, 247, 0.37)
+    ),
+    url(images/feedback.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/* text header */
+.text-header {
+  width: 1000px;
+  color: #f5f5f5;
+  text-align: center;
+  
+  font-weight: 600;
+  font-size: 30px;
+  padding-left: 5px;
+}
+.opinion-title h3 {
+  font-weight: bold;
+  color: #00a6a6;
+}
+.opinions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.opinion1 p {
+  font-size: 15px;
+  width: 300px;
+  color: #424242;
+}
+.opinion2 p {
+  font-size: 15px;
+  width: 300px;
+  color: #424242;
+}
+.opinion3 p {
+  font-size: 15px;
+  width: 300px;
+  color: #424242;
+}
+.opinion3 p span {
+  color: #00a6a6;
+}
+.opinion1 p span {
+  color: #00a6a6;
+}
+.opinion2 p span {
+  color: #028282;
+}
