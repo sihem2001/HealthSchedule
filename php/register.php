@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/register.css">
@@ -51,24 +52,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <header class="loginHeader">
         <nav><h1>HealthScheduale <i class="fas fa-notes-medical"></i></h1></nav>
     </header>
+    <section class="generativePicture">
+    </section>
     <!-- register page -->
      <section class="registerPage">
-    <h1>Welcome <strong> Register page</strong></h1>
+      <fieldset class="fieldset">
+      <legend> <i class="fas fa-user-plus"></i> Welcome  Register page </legend>
     <!-- affiche l'erreur -->
     <?php if ($error): ?>
           <p style="color:red;"><?= htmlspecialchars($error) ?></p>
     <?php endif ?>
     <form method="post" action="register.php">
         <label>Email : </label>
-        <input type="email" name="email" required><br>
+        <input type="email" name="email" placeholder="ex:myadress@healthschadule.com" required><br>
         <label>Password:</label>
-        <input type="password" name="password" required><br>
+        <input type="password" name="password" placeholder="write a password" required><br>
         <label>Confirme:</label>
-        <input type="password" name="confirm_password" required><br>
+        <input type="password" name="confirm_password" placeholder="rewrite to confirme your password" required><br>
         <button type="submit">Register Now</button>
     </form>
+    </fieldset>
 <!-- case where user already existe -->
-  <p>already Register ? <a href="login.php">LOGING</a></p>
+  <p class="newAccount">already Register ? <a href="login.php">LOGING</a></p>
 </section>
 <!-- footer part -->
     <footer class="footer-section">

@@ -1,0 +1,138 @@
+* {
+  color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+}
+/* generativePicture */
+
+.generativePicture {
+  background-image: url(images/register.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* start the form regestir */
+.registerPage {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.276), rgba(4, 9, 30, 0.322)), url(images/clinic.jpg);
+  height: 10px;
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fieldset {
+  background-color: #fefdfd3f;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.fieldset legend {
+  font-weight: 900;
+  font-size: 30px;
+  padding-left: 5px;
+  color: #f5f5f5;
+}
+.fieldset legend i {
+  color: #f5f5f5;
+}
+/* inputs and labels  */
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #f5f5f5;
+  padding: 5px;
+  letter-spacing: 0.5px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #a9d6e5;
+  border-radius: 12px;
+  background-color: #42424200;
+  font-size: 1rem;
+  color: #2f4f4f;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 166, 166, 0.05);
+  padding: 5px;
+}
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #00a6a6;
+  box-shadow: 0 0 0 4px rgba(0, 166, 166, 0.15);
+}
+.email {
+  margin-bottom: 50px;
+}
+
+.password {
+  margin-bottom: 50px;
+}
+/* button login or register */
+button {
+  width: 100%;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+}
+button {
+  margin: 15px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+
+  border-radius: 50px;
+  display: block;
+}
+button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+/* already have account or new account */
+.newAccount {
+  color: #f5f5f5;
+}
+.newAccount a {
+  color: #00a6a6e6;
+}
+.newAccount a:hover {
+  color: #79cbca;
+}

@@ -56,13 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <?php endif ?>
 
     <form method="post" class="login-form">
-        <div class="email">
+    <div class="email">
     <label>Email :</label>
-     <input type="email" name="email" required><br>
+     <input type="email" name="email" placeholder="ex:myadress@healthschadule.com" required><br>
      </div>
      <div class="password">
     <label>Password:</label>
-     <input type="password" name="password" required><br>
+     <input type="password" name="password" placeholder="write your password" required><br>
      </div>
     
     <button type="submit">LOGIN</button>
