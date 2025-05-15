@@ -57,18 +57,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>UPDATE AGENDA</title>
-
+  <link rel="stylesheet" href="/./css/header.css">
+  <link rel="stylesheet" href="/./css/footer.css">
+  <link rel="stylesheet" href="/./css/update.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- nav bar -->
     <header class="loginHeader">
     <nav >
        <h1 style="color:#f5f5f5">HealthScheduale <i class="fas fa-notes-medical"></i></h1>
-      
+      <button><a href="index.php">← Return</a></button>
     </nav>
     </header>
   <!-- update part -->
-  <h1>Update agenda</h1>
+    <section class="update">
+   <fieldset>
+  <legend>Update agenda</legend>
   <form method="post" action="edit.php?id=<?= htmlspecialchars($id) ?>">
     <label>
       Ttile :
@@ -81,36 +86,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     </label><br><br>
     <button type="submit">SAVE</button>
   </form>
-  
-  <!-- footer  -->
-    <footer class="footer-section">
-    <div class="footer-login">
-        <h3 style="color:#f5f5f5" >For more Informations, Call us .</h3>
-        <ul class="socialMedia">
-          <li>
-            <a href="#"><i  class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="#"><i  class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i  class="fab fa-google"></i></a>
-          </li>
-          <li>
-            <a href="#"><i  class="fab fa-youtube"></i></i></a>
-          </li>
-          <li>
-            <a href="#"><i  class="fab fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i  class="fas fa-phone"></i></a>
-          </li>
-        </ul>
-        <p style="color:#f5f5f5" ><strong style="color:#f5f5f5">Adress :</strong>65, Boulevard Mohamed V, Algiers, Algiers 16002 ·</p>
-    </div>
-    <div class="footer-bottom">
-            <p style="color:#f5f5f5">copyright &copy;2025 codeOpacity. designed by <span>nethunt</span></p> <br>
-    </div>
-</footer>
+  </fieldset>
+  </section>
+
 </body>
 </html>
