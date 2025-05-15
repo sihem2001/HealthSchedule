@@ -53,17 +53,66 @@ if (!$event) exit('Événement introuvable.');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>update page</title>
+    <link rel="stylesheet" href="/../css/header.css">
+  <link rel="stylesheet" href="/../css/footer.css">
+  <link rel="stylesheet" href="/../css/update.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <h1>Modifier l’événement</h1>
+  <!-- nav bar -->
+    <header class="loginHeader">
+    <nav >
+       <h1 style="color:#f5f5f5">HealthScheduale <i class="fas fa-notes-medical"></i></h1>
+      <button><a href="index.php?agenda_id=<?= $agendaId ?>">← Return</a></button>
+    </nav>
+    </header>
+<!-- update part -->
+ <section class="update">
+ <fieldset>
+    <legend><i style="color:black;" class="fas fa-stethoscope"></i> Update appointment</legend>
   <form id="event-form" method="post" action="edit.php?agenda_id=<?= $agendaId ?>&id=<?= $id ?>">
     <label>Title : <input name="title" value="<?= htmlspecialchars($event['title']) ?>" required></label><br>
     <label>Start : <input type="datetime-local" name="start" value="<?= str_replace(' ', 'T', $event['start']) ?>" required></label><br>
     <label>End :   <input type="datetime-local" name="end"   value="<?= str_replace(' ', 'T', $event['end']) ?>" required></label><br>
     <button type="submit">Save</button>
   </form>
-  <p><a href="index.php?agenda_id=<?= $agendaId ?>">← Return</a></p>
+  </fieldset>
+</section>
+
+<!-- footer  -->
+        
+    <footer class="footer-section">
+    <div class="footer-login">
+        <h3 style="color:#f5f5f5" >For more Informations, Call us .</h3>
+        <ul class="socialMedia">
+          <li>
+            <a href="#"><i  class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-youtube"></i></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fas fa-phone"></i></a>
+          </li>
+        </ul>
+        <p style="color:#f5f5f5" ><strong style="color:#f5f5f5">Adress :</strong>65, Boulevard Mohamed V, Algiers, Algiers 16002 ·</p>
+    </div>
+    <div class="footer-bottom">
+            <p style="color:#f5f5f5">copyright &copy;2025 codeOpacity. designed by <span>nethunt</span></p> <br>
+    </div>
+</footer>
+  <!-- javascript -->
   <script>
   document.getElementById('event-form').addEventListener('submit', function(e) {
     const start = new Date(this.start.value);
