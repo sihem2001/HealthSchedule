@@ -1,0 +1,47 @@
+* {
+  color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+}
+.middlePage {
+  background-color: white;
+  margin: 40px auto;
+  padding: 40px 30px;
+  max-width: 600px;
+  max-height: 1000px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.middlePage h1 {
+  color: #00a6a6;
+  margin-bottom: 10px;
+}
+.middlePage p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+button {
+  background-color: #f8487e;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+  background-color: #e03e6f;
+}

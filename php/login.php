@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -54,13 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <?php endif ?>
 
     <form method="post" class="login-form">
-        <div class="email">
+    <div class="email">
     <label>Email :</label>
-     <input type="email" name="email" required><br>
+     <input type="email" name="email" placeholder="ex:myadress@healthschadule.com" required><br>
      </div>
      <div class="password">
     <label>Password:</label>
-     <input type="password" name="password" required><br>
+     <input type="password" name="password" placeholder="write your password" required><br>
      </div>
     
     <button type="submit">LOGIN</button>
