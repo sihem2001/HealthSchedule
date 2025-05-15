@@ -57,8 +57,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>UPDATE AGENDA</title>
+
 </head>
 <body>
+    <!-- nav bar -->
+    <header class="loginHeader">
+    <nav >
+       <h1 style="color:#f5f5f5">HealthScheduale <i class="fas fa-notes-medical"></i></h1>
+      
+    </nav>
+    </header>
+  <!-- update part -->
   <h1>Update agenda</h1>
   <form method="post" action="edit.php?id=<?= htmlspecialchars($id) ?>">
     <label>
@@ -72,6 +81,36 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     </label><br><br>
     <button type="submit">SAVE</button>
   </form>
-  <p><a href="index.php">← Return to agenda list</a></p>
+  
+  <!-- footer  -->
+    <footer class="footer-section">
+    <div class="footer-login">
+        <h3 style="color:#f5f5f5" >For more Informations, Call us .</h3>
+        <ul class="socialMedia">
+          <li>
+            <a href="#"><i  class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-youtube"></i></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i  class="fas fa-phone"></i></a>
+          </li>
+        </ul>
+        <p style="color:#f5f5f5" ><strong style="color:#f5f5f5">Adress :</strong>65, Boulevard Mohamed V, Algiers, Algiers 16002 ·</p>
+    </div>
+    <div class="footer-bottom">
+            <p style="color:#f5f5f5">copyright &copy;2025 codeOpacity. designed by <span>nethunt</span></p> <br>
+    </div>
+</footer>
 </body>
 </html>

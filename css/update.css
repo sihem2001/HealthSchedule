@@ -1,0 +1,113 @@
+* {
+}
+
+/* footer part */
+.fab {
+  color: #f5f5f5;
+}
+.fab :hover {
+  color: #e6f2ff;
+}
+.fas {
+  color: #f5f5f5;
+}
+.fas :hover {
+  color: #e6f2ff;
+}
+.fa-calendar-check {
+  color: #455a64;
+}
+/* navbar part */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav button {
+  width: 150px;
+  padding: 12px;
+
+  color: #333;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  background-color: #7fb9f7;
+}
+nav button {
+  margin-right: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
+}
+nav a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+/* container form */
+.update {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f5f5f5;
+  margin-right: 0px;
+  padding-bottom: 30px;
+}
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 390px;
+  margin: auto;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  align-self: center;
+}
+fieldset legend {
+  font-size: 20px;
+  padding-left: 5px;
+  color: #455a64;
+}
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #455a64;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  width: 90%;
+  padding: 12px 16px;
+  border: 2px solid #a9d6e5;
+  border-radius: 12px;
+  background-color: #42424200;
+  font-size: 1rem;
+  color: #2f4f4f;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 166, 166, 0.05); /* ombre légère */
+}
+fieldset button {
+  width: 150px;
+  padding: 12px;
+
+  color: #f5f5f5;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  background-color: #7fb9f7;
+  margin-left: 120px;
+}

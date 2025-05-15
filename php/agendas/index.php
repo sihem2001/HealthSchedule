@@ -53,7 +53,7 @@ $agendas = $stmt->fetchAll();
     <fieldset class="fieldset">
     <legend> <i class="fas fa-calendar-check"></i> MY AGENDA </legend><br>
     
-    <button class="button "><a class="link" href="../dashboard.php"> _Dashboard</a></button> <br>
+    <button class="button "><a class="link" href="../dashboard.php"> ← Dashboard</a></button> <br>
 
     <form class="fieldset" method="post">
         <input type="text" name="title" placeholder="title of new agenda" required><br> <br>
@@ -70,7 +70,7 @@ $agendas = $stmt->fetchAll();
         <button class="update"> <a class="link" href="edit.php?id=<?= $a['id'] ?>">Update</a></button>
         <button class="delete">
            <a class="link" href="delete.php?id=<?= $a['id'] ?>" onclick="return confirm('Supprimer cet agenda ?')">Delete</a></button>
-        <button class="event"><a class="link" href="event/index.php?agenda_id=<?= $a['id'] ?>">Event</a></button>
+        <button class="event"><a class="link" href="event/index.php?agenda_id=<?= $a['id'] ?>">Appointment</a></button>
         </li>
     <?php endforeach; ?>
     </ul>
